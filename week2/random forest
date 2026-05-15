@@ -1,0 +1,32 @@
+1. Core Concepts
+Ensemble Method: Combining multiple machine learning models (base learners) to create a single, more robust prediction. This reduces variance (overfitting) and improves accuracy.
+
+Bagging (Bootstrap Aggregating): Training individual trees in parallel on different random subsets of the data sampled with replacement. Predictions are then aggregated.
+
+Feature Randomness: At each node split, the tree can only choose from a random subset of features. This decorrelates the trees, making the forest more diverse.
+
+2. Decision Trees vs. Random Forest
+Single Tree: High variance, prone to overfitting, highly sensitive to data noise, but very easy to interpret.
+
+Random Forest: Low variance, robust against noise, higher accuracy, but acts as a "black box" (harder to interpret).
+
+3. Aggregation & Hyperparameters
+Prediction Methods
+Classification: Majority Voting (the class with the most votes wins).
+
+Regression: Averaging (the mathematical mean of all tree outputs).
+
+Key Hyperparameters
+n_estimators: Number of trees in the forest.
+
+max_depth: Maximum depth of each individual tree.
+
+max_features: Size of the random subset of features considered at each split.
+
+4. Feature Importance & Pros/Cons
+Feature Importance: Ranks variables based on how much they reduce uncertainty (impurity) across the forest, helping identify which inputs matter most.
+
+Pros & Cons
+Strengths: High accuracy out-of-the-box, handles mixed data types well, resistant to overfitting.
+
+Weaknesses: Computationally slow with large datasets, high memory consumption, loss of easy interpretability.
